@@ -1,13 +1,522 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Зоопарк Дикой Природы</title>
+</head>
+<body>
+  <div class="app">
+    <!-- Шапка с логотипом и навигацией -->
+    <header class="header">
+      <div class="container header-container">
+        <div class="logo-container">
+          <img src="assets/images/placeholder.svg" alt="Логотип зоопарка" class="logo-image">
+          <span class="logo-text">Зоопарк Дикой Природы</span>
+        </div>
+
+        <!-- Десктопная навигация -->
+        <nav class="desktop-nav">
+          <a href="#" class="nav-link">Главная</a>
+          <a href="#animals" class="nav-link">Животные</a>
+          <a href="#events" class="nav-link">События</a>
+          <a href="#tickets" class="nav-link">Билеты</a>
+          <a href="#reviews" class="nav-link">Отзывы</a>
+          <a href="#contact" class="nav-link">Контакты</a>
+        </nav>
+
+        <!-- Мобильная навигация -->
+        <button class="mobile-menu-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="menu-icon"
+          >
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <span class="sr-only">Открыть меню</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Баннер -->
+      <section class="hero-section">
+        <div class="hero-image-container">
+          <img src="assets/images/zoopark.jpg" alt="Баннер зоопарка" class="hero-image">
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">Добро пожаловать в Зоопарк Дикой Природы</h1>
+          <p class="hero-description">
+            Откройте для себя удивительный мир животных в нашем прекрасном зоопарке. Познакомьтесь с природой вблизи!
+          </p>
+          <button class="cta-button">Исследовать</button>
+        </div>
+      </section>
+
+      <!-- Галерея животных -->
+      <section id="animals" class="animals-section">
+        <div class="container">
+          <h2 class="section-title">Наши животные</h2>
+
+          <div class="animal-tabs">
+            <div class="tabs-list">
+              <button class="tab-button active" data-tab="mammals">Млекопитающие</button>
+              <button class="tab-button" data-tab="birds">Птицы</button>
+              <button class="tab-button" data-tab="fish">Рыбы</button>
+              <button class="tab-button" data-tab="others">Другие</button>
+            </div>
+
+            <!-- Млекопитающие -->
+            <div class="tab-content active" id="mammals-content">
+              <div class="animal-grid">
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/joj.jpg" alt="Ежик" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Ежик</h3>
+                    <p class="animal-description">Ежик — небольшое млекопитающее, покрытое острыми иголками для защиты от хищников. При опасности сворачивается в колючий шар. Ведет преимущественно ночной образ жизни, питается насекомыми, червями, мелкими позвоночными и растительной пищей.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/lion-1.jpg" alt="Лев" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Лев</h3>
+                    <p class="animal-description">Лев — крупный хищник семейства кошачьих, известный как «царь зверей». Самцы отличаются внушительной гривой, символизирующей силу и статус. Живут прайдами до 30 особей, где самки занимаются охотой, а самцы защищают территорию.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/delfin.jpg" alt="Дельфин" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Дельфин</h3>
+                    <p class="animal-description">Дельфины — одни из самых умных морских млекопитающих с высокоразвитым социальным поведением. Общаются с помощью сложной системы звуков и эхолокации. Известны своей игривостью и способностью к обучению.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/Koala.jpg" alt="Коала" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Коала</h3>
+                    <p class="animal-description">Коала — сумчатое млекопитающее, обитающее исключительно в Австралии. Питается листьями эвкалипта, которые токсичны для большинства животных. Проводит до 20 часов в день во сне, экономя энергию для переваривания сложной пищи.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Птицы -->
+            <div class="tab-content" id="birds-content">
+              <div class="animal-grid">
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/pingvin.jpg" alt="Пингвин" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Императорский пингвин</h3>
+                    <p class="animal-description">Самый крупный и тяжелый из современных видов пингвинов. Обитает в Антарктиде, где выдерживает суровые условия с температурой до -60°C и скоростью ветра до 200 км/ч.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/solovey.jpg" alt="Соловей" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Соловей</h3>
+                    <p class="animal-description">Небольшая певчая птица семейства мухоловковых, знаменитая своим мелодичным пением. Несмотря на скромную внешность, соловей обладает удивительными вокальными способностями.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/ara.jpg" alt="Ара" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Ара</h3>
+                    <p class="animal-description">Яркие представители семейства попугаевых, известные своей красочной окраской и интеллектом. Обитают в тропических лесах Центральной и Южной Америки.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/orel.jpg" alt="Орел" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Орел</h3>
+                    <p class="animal-description">Крупные хищные птицы из семейства ястребиных с мощным клювом и острым зрением. Являются вершиной пищевой цепи и важными индикаторами здоровья экосистемы.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Рыбы -->
+            <div class="tab-content" id="fish-content">
+              <div class="animal-grid">
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/nemo.jpg" alt="Рыба-клоун" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Рыба-клоун</h3>
+                    <p class="animal-description">Яркая морская рыба, известная своей способностью жить среди ядовитых щупалец актиний. Образует с актиниями симбиотические отношения, получая защиту в обмен на уборку и вентиляцию.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/White_shark.jpg" alt="Белая акула" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Белая акула</h3>
+                    <p class="animal-description">Один из крупнейших морских хищников с длиной тела до 6-7 метров. Обитает в прибрежных водах всех океанов. Несмотря на свою репутацию, белые акулы редко нападают на людей.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/Cyprinus-carpio.jpg" alt="Карп" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Карп</h3>
+                    <p class="animal-description">Пресноводная рыба, широко распространённая в водоёмах Евразии. Всеядна и легко адаптируется к разным условиям среды. Карп является одним из самых важных объектов аквакультуры в мире.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/Black_Sea_fauna_Seahorse.jpg" alt="Морской конек" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Морской конек</h3>
+                    <p class="animal-description">Необычная морская рыба с вертикальным положением тела и спиральным хвостом. Уникальны тем, что у них именно самцы вынашивают потомство в специальной сумке.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Другие -->
+            <div class="tab-content" id="others-content">
+              <div class="animal-grid">
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/gekkon-toki.jpg" alt="Геккон" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Геккон</h3>
+                    <p class="animal-description">Ящерицы, известные своей способностью взбираться по вертикальным поверхностям и даже ходить по потолку благодаря микроскопическим щетинкам на лапах.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/IguanaIguana.jpg" alt="Игуана" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Игуана</h3>
+                    <p class="animal-description">Крупные ящерицы с гребнем на спине, обитающие в тропических регионах Центральной и Южной Америки. В основном растительноядны и могут жить до 20 лет в дикой природе.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/Testudo graeca.jpg" alt="Черепаха" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Черепаха</h3>
+                    <p class="animal-description">Рептилии с характерным панцирем, состоящим из карапакса и пластрона. Известны своим долголетием и медленным темпом жизни.</p>
+                  </div>
+                </div>
+                <div class="animal-card">
+                  <div class="animal-image-container">
+                    <img src="assets/images/Crocodylus.jpg" alt="Крокодил" class="animal-image">
+                  </div>
+                  <div class="animal-content">
+                    <h3 class="animal-title">Крокодил</h3>
+                    <p class="animal-description">Крупные водные хищники, существующие на планете более 200 миллионов лет. Обладают мощными челюстями и являются верхушкой пищевой цепи в своих экосистемах.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- События -->
+      <section id="events" class="events-section">
+        <div class="container">
+          <h2 class="section-title">Предстоящие события</h2>
+          <div class="events-grid">
+            <div class="event-card">
+              <div class="event-image-container">
+                <img src="assets/images/panda.jpg" alt="День панды" class="event-image">
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">День панды</h3>
+                <div class="event-detail">
+                  <svg class="event-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span>15 июля 2025</span>
+                </div>
+                <div class="event-detail">
+                  <svg class="event-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>10:00 - 18:00</span>
+                </div>
+                <p class="event-description">Специальный день, посвященный нашим пандам. Узнайте больше об их среде обитания, питании и поведении. Присоединяйтесь к нам для увлекательных мастер-классов и образовательных программ.</p>
+              </div>
+            </div>
+            <div class="event-card">
+              <div class="event-image-container">
+                <img src="assets/images/tigr.jpeg" alt="Ночь тигра" class="event-image">
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">Ночь тигра</h3>
+                <div class="event-detail">
+                  <svg class="event-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span>29 июля 2025</span>
+                </div>
+                <div class="event-detail">
+                  <svg class="event-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>19:00 - 23:00</span>
+                </div>
+                <p class="event-description">Уникальная возможность увидеть ночную активность тигров. Экскурсия включает специальное вечернее кормление и лекцию о сохранении этих великолепных исчезающих животных в дикой природе.</p>
+              </div>
+            </div>
+            <div class="event-card">
+              <div class="event-image-container">
+                <img src="assets/images/pingvin1.jpg" alt="Парад пингвинов" class="event-image">
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">Парад пингвинов</h3>
+                <div class="event-detail">
+                  <svg class="event-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span>12 августа 2025</span>
+                </div>
+                <div class="event-detail">
+                  <svg class="event-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>14:00 - 15:30</span>
+                </div>
+                <p class="event-description">Ежедневный парад пингвинов — одно из самых популярных событий в нашем зоопарке! Наблюдайте, как пингвины гуляют по специальной дорожке под наблюдением смотрителей.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Билеты -->
+      <section id="tickets" class="tickets-section">
+        <div class="container">
+          <div class="tickets-container">
+            <h2 class="tickets-title">Приобретите билеты онлайн</h2>
+            <p class="tickets-description">
+              Спланируйте свой визит заранее! Покупка билетов онлайн поможет избежать очередей и сэкономить время.
+            </p>
+            <button class="tickets-button">Купить билеты</button>
+          </div>
+
+          <!-- Информация о билетах -->
+          <div class="ticket-info-section">
+            <h3 class="section-title">Типы билетов</h3>
+            <div class="ticket-types-grid">
+              <div class="ticket-card">
+                <div class="ticket-content">
+                  <h4 class="ticket-title">Стандартный</h4>
+                  <ul class="ticket-list">
+                    <li>Доступ ко всем экспозициям</li>
+                    <li>Карта зоопарка</li>
+                    <li>Информационная брошюра</li>
+                  </ul>
+                  <button class="ticket-button">От 700₽</button>
+                </div>
+              </div>
+              <div class="ticket-card">
+                <div class="ticket-content">
+                  <h4 class="ticket-title">Премиум</h4>
+                  <ul class="ticket-list">
+                    <li>Все преимущества стандартного</li>
+                    <li>Кормление животных</li>
+                    <li>Экскурсия с гидом</li>
+                  </ul>
+                  <button class="ticket-button">От 1500₽</button>
+                </div>
+              </div>
+              <div class="ticket-card">
+                <div class="ticket-content">
+                  <h4 class="ticket-title">Семейный</h4>
+                  <ul class="ticket-list">
+                    <li>2 взрослых + 3 детских билета</li>
+                    <li>Скидка 20%</li>
+                    <li>Детский подарок</li>
+                  </ul>
+                  <button class="ticket-button">От 2500₽</button>
+                </div>
+              </div>
+              <div class="ticket-card">
+                <div class="ticket-content">
+                  <h4 class="ticket-title">Годовой абонемент</h4>
+                  <ul class="ticket-list">
+                    <li>Безлимитные посещения</li>
+                    <li>Скидки на мероприятия</li>
+                    <li>Приоритетная запись</li>
+                  </ul>
+                  <button class="ticket-button">10000₽</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-info">
+              <h4 class="payment-title">Способы оплаты</h4>
+              <p class="payment-description">
+                Принимаем наличные, банковские карты и электронные платежи. Для групповых заказов доступна оплата по счету.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Отзывы -->
+      <section id="reviews" class="reviews-section">
+        <div class="container">
+          <h2 class="section-title">Отзывы посетителей</h2>
+          <div class="reviews-carousel">
+            <div class="reviews-container">
+              <div class="review-card">
+                <p class="review-text">
+                  "Великолепный зоопарк с отличными условиями для животных. Особенно впечатлил вольер для тигров. Дети были в восторге!"
+                </p>
+                <div class="review-avatar-container">
+                  <img src="assets/images/avatar.png" alt="Аватар" class="review-avatar">
+                </div>
+                <p class="review-author">Анна Петрова</p>
+                <p class="review-role">Постоянный посетитель</p>
+              </div>
+              <div class="review-card">
+                <p class="review-text">
+                  "Очень познавательно и интересно. Порадовала образовательная программа и компетентные гиды. Обязательно приедем снова."
+                </p>
+                <div class="review-avatar-container">
+                  <img src="assets/images/avatar.png" alt="Аватар" class="review-avatar">
+                </div>
+                <p class="review-author">Иван Сидоров</p>
+                <p class="review-role">Учитель биологии</p>
+              </div>
+              <div class="review-card">
+                <p class="review-text">
+                  "Замечательно провели время всей семьей. Чистая территория, удобная навигация, разнообразие животных. Рекомендую!"
+                </p>
+                <div class="review-avatar-container">
+                  <img src="assets/images/avatar.png" alt="Аватар" class="review-avatar">
+                </div>
+                <p class="review-author">Семья Котовых</p>
+                <p class="review-role">Туристы</p>
+              </div>
+            </div>
+            <button class="carousel-button prev-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="carousel-button next-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3 class="footer-title">Контакты</h3>
+            <ul class="footer-contact-list">
+              <li class="footer-contact-item">
+                <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Улан-Баторская ул, 6, Иркутск
+              </li>
+              <li class="footer-contact-item">
+                <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                +7 (123) 456-78-90
+              </li>
+              <li class="footer-contact-item">
+                <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                info@wildzoo.ru
+              </li>
+            </ul>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="assets/images/facebook.png" alt="Facebook" class="social-icon">
+              </a>
+              <a href="#" class="social-link">
+                <img src="assets/images/twitter.png" alt="Twitter" class="social-icon">
+              </a>
+              <a href="#" class="social-link">
+                <img src="assets/images/instagram.png" alt="Instagram" class="social-icon">
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-title">Часы работы</h3>
+            <ul class="footer-hours-list">
+              <li>Понедельник - Пятница: 9:00 - 20:00</li>
+              <li>Суббота - Воскресенье: 9:00 - 22:00</li>
+              <li>Летний сезон (июнь-август): 8:00 - 22:00</li>
+            </ul>
+          </div>
+          <div class="newsletter-signup">
+            <h3 class="newsletter-title">Подпишитесь на новости</h3>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Ваш email" class="newsletter-input">
+              <button type="submit" class="newsletter-button">Подписаться</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Зоопарк Дикой Природы. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
