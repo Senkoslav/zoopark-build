@@ -3,6 +3,31 @@ import './App.css';
 import TabsController from './TabsController';
 import CarouselController from './CarouselController';
 
+import zooparkImg from './assets/images/zoopark.jpg';
+import hedgehogImg from './assets/images/joj.jpg';
+import lionImg from './assets/images/lion-1.jpg';
+import dolphinImg from './assets/images/delfin.jpg';
+import koalaImg from './assets/images/Koala.jpg';
+import penguin1Img from './assets/images/pingvin1.jpg';
+import nightingaleImg from './assets/images/solovey.jpg';
+import araImg from './assets/images/ara.jpg';
+import eagleImg from './assets/images/orel.jpg';
+import nemoImg from './assets/images/nemo.jpg';
+import sharkImg from './assets/images/White_shark.jpg';
+import carpImg from './assets/images/Cyprinus-carpio.jpg';
+import seahorseImg from './assets/images/Black_Sea_fauna_Seahorse.jpg';
+import geckoImg from './assets/images/gekkon-toki.jpg';
+import iguanaImg from './assets/images/IguanaIguana.jpg';
+import turtleImg from './assets/images/Testudo graeca.jpg';
+import crocImg from './assets/images/Crocodylus.jpg';
+import pandaImg from './assets/images/panda.jpg';
+import tigerImg from './assets/images/tigr.jpeg';
+import penguinImg from './assets/images/pingvin.jpg';
+import avatarImg from './assets/images/avatar.png';
+import facebookIcon from './assets/images/facebook.png';
+import twitterIcon from './assets/images/twitter.png';
+import instagramIcon from './assets/images/instagram.png';
+import logo from './assets/images/placeholder.svg'
 function App() {
   return (
     <div className="app">
@@ -14,7 +39,7 @@ function App() {
       <header className="header">
         <div className="container header-container">
           <div className="logo-container">
-            <img src="/placeholder.svg" alt="Логотип зоопарка" className="logo-image" />
+            <img src={logo} alt="Логотип зоопарка" className="logo-image" />
             <span className="logo-text">Зоопарк Дикой Природы</span>
           </div>
 
@@ -55,7 +80,7 @@ function App() {
         {/* Баннер */}
         <section className="hero-section">
           <div className="hero-image-container">
-            <img src="/images/zoopark.jpg" alt="Баннер зоопарка" className="hero-image" />
+            <img src={zooparkImg} alt="Баннер зоопарка" className="hero-image" />
           </div>
           <div className="hero-content">
             <h1 className="hero-title">Добро пожаловать в Зоопарк Дикой Природы</h1>
@@ -85,7 +110,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/joj.jpg"
+                        src={hedgehogImg}
                         alt="Ежик"
                         className="animal-image"
                       />
@@ -98,7 +123,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/lion-1.jpg"
+                        src={lionImg}
                         alt="Лев"
                         className="animal-image"
                       />
@@ -111,7 +136,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/delfin.jpg"
+                        src={dolphinImg}
                         alt="Дельфин"
                         className="animal-image"
                       />
@@ -124,7 +149,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/Koala.jpg"
+                        src={koalaImg}
                         alt="Коала"
                         className="animal-image"
                       />
@@ -143,7 +168,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/pingvin1.jpg"
+                        src={penguinImg}
                         alt="Пингвин"
                         className="animal-image"
                       />
@@ -156,7 +181,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/solovey.jpg"
+                        src={nightingaleImg}
                         alt="Соловей"
                         className="animal-image"
                       />
@@ -169,7 +194,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/ara.jpg"
+                        src={araImg}
                         alt="Ара"
                         className="animal-image"
                       />
@@ -182,7 +207,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/orel.jpg"
+                        src={eagleImg}
                         alt="Белоголовый орлан"
                         className="animal-image"
                       />
@@ -201,7 +226,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/nemo.jpg"
+                        src={nemoImg}
                         alt="Рыба-клоун"
                         className="animal-image"
                       />
@@ -214,7 +239,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/White_shark.jpg"
+                        src={sharkImg}
                         alt="Белая акула"
                         className="animal-image"
                       />
@@ -227,7 +252,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/Cyprinus-carpio.jpg"
+                        src={carpImg}
                         alt="Карп"
                         className="animal-image"
                       />
@@ -240,7 +265,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/Black_Sea_fauna_Seahorse.jpg"
+                        src={seahorseImg}
                         alt="Морской конёк"
                         className="animal-image"
                       />
@@ -259,7 +284,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/gekkon-toki.jpg"
+                        src={geckoImg}
                         alt="Геккон токи"
                         className="animal-image"
                       />
@@ -272,7 +297,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/IguanaIguana.jpg"
+                        src={iguanaImg}
                         alt="Зеленая игуана"
                         className="animal-image"
                       />
@@ -285,7 +310,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/Testudo graeca.jpg"
+                        src={turtleImg}
                         alt="Средиземноморская черепаха"
                         className="animal-image"
                       />
@@ -298,7 +323,7 @@ function App() {
                   <div className="animal-card">
                     <div className="animal-image-container">
                       <img
-                        src="/images/Crocodylus.jpg"
+                        src={crocImg}
                         alt="Нильский крокодил"
                         className="animal-image"
                       />
@@ -324,7 +349,7 @@ function App() {
               <div className="event-card">
                 <div className="event-image-container">
                   <img
-                    src="/images/panda.jpg"
+                    src={pandaImg}
                     alt="Кормление панд"
                     className="event-image"
                   />
@@ -349,7 +374,7 @@ function App() {
               <div className="event-card">
                 <div className="event-image-container">
                   <img
-                    src="/images/tigr.jpeg"
+                    src={tigerImg}
                     alt="Шоу тигров"
                     className="event-image"
                   />
@@ -374,7 +399,7 @@ function App() {
               <div className="event-card">
                 <div className="event-image-container">
                   <img
-                    src="/images/pingvin.jpg"
+                    src={penguin1Img}
                     alt="Шоу пингвинов"
                     className="event-image"
                   />
@@ -420,7 +445,7 @@ function App() {
                 <div className="review-card">
                   <div className="review-avatar-container">
                     <img
-                      src="/images/avatar.png"
+                      src={avatarImg}
                       alt="Клиент"
                       className="review-avatar"
                     />
@@ -436,7 +461,7 @@ function App() {
                 <div className="review-card">
                   <div className="review-avatar-container">
                     <img
-                      src="/images/avatar.png"
+                      src={avatarImg}
                       alt="Клиент"
                       className="review-avatar"
                     />
@@ -452,7 +477,7 @@ function App() {
                 <div className="review-card">
                   <div className="review-avatar-container">
                     <img
-                      src="/images/avatar.png"
+                      src={avatarImg}
                       alt="Клиент"
                       className="review-avatar"
                     />
@@ -579,13 +604,13 @@ function App() {
               <h3 className="footer-title">Подписывайтесь на нас</h3>
               <div className="social-links">
                 <a href="#" className="social-link">
-                  <img src="/images/facebook.png" alt="Facebook" className="social-icon" />
+                  <img src={facebookIcon} alt="Facebook" className="social-icon" />
                 </a>
                 <a href="#" className="social-link">
-                  <img src="/images/twitter.png" alt="Twitter" className="social-icon" />
+                  <img src={twitterIcon} alt="Twitter" className="social-icon" />
                 </a>
                 <a href="#" className="social-link">
-                  <img src="/images/instagram.png" alt="Instagram" className="social-icon" />
+                  <img src={instagramIcon} alt="Instagram" className="social-icon" />
                 </a>
               </div>
               <div className="newsletter-signup">
